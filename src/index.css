@@ -1,13 +1,598 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* Font For Quran */
+@font-face {
+  font-family: hafs;
+  src: url(./Fonts/gaded.ttf);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+  font-family: q1;
+  src: url(./Fonts/quran-hafs.woff)
+}
+
+/* For All Elements */
+* {
+  margin: 0 ;
+  padding: 0 ;
+  scroll-behavior: smooth;
+  font-family: 'Marhey', cursive ;
+}
+
+body {
+  overflow: overlay;
+}
+
+/* For Moding and Scroll To Top */
+.extras {
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 10px;
+  z-index: 100;
+} .arrow {
+  transform: translateX(200%);
+  transition: 0.5s cubic-bezier(0.215, 0.610, 0.355, 1) !important;
+} .moding {
+  transition: 0.5s cubic-bezier(0.215, 0.610, 0.355, 1) !important;
+}
+
+/* Animation For Home */
+.homeContent {
+  animation: halfScale 1s ;
+} @keyframes halfScale {
+  0% {
+    opacity: 0.1;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+} .header {
+  transition: 0.5s cubic-bezier(0.215, 0.610, 0.355, 1) !important;
+} .header div h4 {
+  font-family: Marhey, cursive ;
+}
+
+/* Style For Read and Listen Page */
+.readPage , .listenPage {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+} .listenPage {
+  min-height: calc(100vh - 104px);
+}
+
+.namesShowing {
+  animation: yyy 1s cubic-bezier(0.215, 0.610, 0.355, 1) ;
+} @keyframes yyy {
+  0% {
+    transform: translateX(-200%);
+    opacity: 0;
+  } 100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.namesHidding {
+  animation: aa 1s cubic-bezier(0.215, 0.610, 0.355, 1) ;
+} @keyframes aa {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  } 100% {
+    transform: translateX(-200%);
+    opacity: 0;
+  }
+}
+
+.about {
+  animation: law 1s cubic-bezier(0.215, 0.610, 0.355, 1) ;
+} @keyframes law {
+  0% {
+    transform: translateY(-200%);
+    opacity: 0;
+  } 100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.aboutHiding {
+  transform: translateY(-200%);
+  animation: law2 1s cubic-bezier(0.215, 0.610, 0.355, 1) ;
+} @keyframes law2 {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  } 100% {
+    opacity: 0;
+    transform: translateY(-200%);
+  }
+}
+
+.surahReadPage {
+  padding: 40px;
+  direction: rtl;
+  text-align: center;
+  line-height: 1.8;
+  min-height: calc(100vh - 144px);
+} @keyframes law3 {
+  0% {
+    opacity: 0;
+  } 50% {
+    opacity: 1;
+  }
+} .headReadPage {
+  min-height: calc(100vh - 64px);
+}
+
+.ayat {
+  animation: yyy 1s ;
+  word-spacing: 5px;
+  font-size: 30px;
+  font-family: 'q1';
+  line-height: 2;
+  cursor: pointer;
+  transition: 0.5s ;
+} .ayat:hover {
+  background-color: rgba(128, 128, 128, 0.3);
+
+}
+
+.ayat span {
+  border-radius: 100%;
+}
+
+.lineTop {
+  position: fixed;
+  top: 0 ;
+  background: rgb(255,127,80);
+  background: linear-gradient(107deg, rgba(255,127,80,1) 0%, rgba(255,215,0,1) 100%);
+  width: 0;
+  height: 4px;
+  z-index: 2000;
+  transition: 0.5s cubic-bezier(0.215, 0.610, 0.355, 1) !important;
+}
+
+.audioSection {
+  position: fixed;
+  top: 50% ;
+  left: 50%;
+  transform: translate(-50%,-50%) scale(1);
+  animation: au 0.5s ;
+  text-align: center;
+  border-radius: 10px;
+  padding: 20px;
+  width: 80%;
+} .audioSection audio {
+  width: 100%;
+} .highlightAudio {
+  position: fixed;
+  top: 0 ;
+  height: 100vh;
+  width: 100%;
+  background-color: rgb(0, 0, 0, 0.6);
+  animation: aus 0.5s ;
+} @keyframes au {
+  0% {
+    opacity: 0;
+    transform: translate(-50%,-50%) scale(0.5);
+  } 50% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+} @keyframes aus {
+  0% {
+    opacity: 0;
+    transform: translateY(-200%);
+  } 50% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.inputSearch {
+  width: 300px;
+  outline: none;
+  border: 2px solid #999;
+  border-radius: 10px;
+  font-size: 20px;
+} 
+
+.finalRes {
+  animation: up 1s ;
+  padding: 20px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.1) ;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+} .finalRes:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+} .finalRes p {
+  color: white ;
+  font-family: q1 ;
+  word-spacing: 5px;
+  font-size: 30px;
+} .num , .numVerse , .numVersePlus {
+  animation: up 1s ;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  align-items: center;
+  color: white ;
+  font-family: q1 ;
+  word-spacing: 5px;
+  font-size: 30px;
+  background-color: rgba(255, 255, 255, 0.1) ;
+  border-bottom: 20px solid #8a92a554;
+  padding: 10px;
+  transition: 0.3s;
+  gap: 20px ;
+} .numVerse {
+  margin-bottom: 30px;
+  padding: 10px 20px;
+  border-radius: 0px 0px 40px 40px;
+  border-bottom: 0 ;
+} .numVersePlus {
+  margin-bottom: 30px;
+  padding: 10px 20px;
+  border-radius: 0;
+  border-bottom: 5px solid #8a92a554;
+}
+
+.numS {
+  color: #FCBC09 !important ;
+  text-align: end;
+  font-family: hafs !important;
+} .numTwo {
+  text-align: start ;
+  background-color: red ;
+  border: 1px solid;
+  padding: 5px;
+  border-radius: 5px;
+} .moreBtn {
+  text-align: center;
+  padding: 20px;
+}
+.match {
+  color: #FCBC09 ;
+  animation: down 1s;
+} @keyframes up {
+  0% {
+    opacity: 0;
+    transform: translateY(10%);
+  } 50% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes down {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  } 50% {
+    opacity: 0;
+    transform: translateY(10%);
+  }
+}
+
+.font {
+  font-family: hafs !important;
+}
+
+.inputSearch {
+  max-width: 70%;
+}
+.inputSearch::placeholder {
+  color: white ;
+}
+
+.inputBox {
+  /* position: absolute;
+  top: 50% ;
+  left: 50%;
+  transform: translate(-50%,-50%); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 100vh; */
+  animation: auss 1s ;
+  max-width: 100% ;
+  padding: 10px;
+
+  margin-top: 54px;
+  height: 15vh;
+  transition: 0.5s;
+} .inputBoxToTop {
+  /* top: 10px ;
+  left: 50%;
+  transform: translate(-50%); */
+  margin-top: 54px;
+  height: 15vh;
+  transition: 0.5s;
+  border-bottom: 20px solid #8a92a554;
+} @keyframes auss {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  } 50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.resultsBar {
+  transition: 0.5s cubic-bezier(0.215, 0.610, 0.355, 1) !important;
+  color: white ;
+  font-size: 20px;
+  animation: up 1s ;
+} .resultsBarP {
+  animation: up 1s ;
+} .resultsBar p {
+  font-family: hafs;
+} .rrr .match {
+  padding: 0 5px;
+  font-size: 17px;
+} .resultsBar .match2 {
+  font-family: hafs;
+  font-size: 25px;
+  padding: 0 5px;
+}
+
+.contentSearch {
+  overflow-y: auto;
+  background-color: rgba(10, 42, 58, 0.99);
+  position: fixed;
+  top: 0 ;
+  height: 100%;
+  width: 100%;
+  animation: up2 0.5s cubic-bezier(0.215, 0.610, 0.355, 1) ;
+  direction: rtl;
+  transition: 0.5s cubic-bezier(0.215, 0.610, 0.355, 1);
+} @keyframes up2 {
+  0% {
+    opacity: 0;
+    transform: translateY(10%);
+  } 50% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+} .contentSearchIn {
+  padding: 10px 30px;
+}
+
+.finalResTwo {
+  animation: up 1s ;
+  border-radius: 1px;
+  border-right: 5px solid #FCBC09;
+  padding: 20px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.1) ;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: 0.3s;
+  border-radius: 40px 0 0 0 ;
+} .finalResTwo p , .finalResTwo p .match {
+  font-family: q1;
+  word-spacing: 5px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.ayaAbout {
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  display: flex;
+  gap: 20px ;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: -30px;
+  margin-bottom: 30px;
+  border-radius: 0px 0px 40px 40px;
+} .ayaAbout .match {
+  padding: 0 5px;
+}
+
+.ayaAudio {
+  text-align: center;
+  padding: 20px 0;
+} .ayaAudio audio {
+  max-width: 90%;
+  width: 600px ;
+
+} .ayaAbout p {
+  color: white ;
+} 
+
+.finalRes p .match {
+  font-family: q1;
+} 
+
+.hiddenContent {
+  position: fixed;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.1);
+  height: 70px;
+  width: 70px;
+  cursor: pointer;
+  transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  border-radius: 0 0px 30px 0px;
+} .hiddenContent::before {
+  content: '<';
+  position: absolute;
+  top: 50% ;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  font-size: 40px;
+  transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  color: white;
+} .hiddenContent:hover::before {
+  transform: translate(-50%,-50%) skew(10deg) scaleX(1.5) ;
+  border-radius: 0 10px 10px 10px;
+  color: rgb(252, 188, 9);
+} .hiddenContent:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+} 
+
+
+
+.copy {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  animation: uuu 1s ;
+  background-color: grey;
+  border: 2px solid gold ;
+  transform: translate(-50% , -50%);
+  color: gold ;
+  padding: 10px;
+  border-radius: 100px;
+  font-size: 20px;
+  box-shadow: 0 0 10px black;
+} @keyframes uuu {
+  0% {
+    opacity: 0;
+    transform: translate(-50% , -100%);
+  } 50% {
+    opacity: 1;
+    transform: translate(-50% , 0);
+  } 100% {
+    opacity: 0;
+    transform: translate(-50% , 100%);
+  }
+} 
+
+.copyIcon {
+  width: 50px ;
+  height: 50px ;
+  transition: 0.4s;
+  z-index: 3000;
+  cursor: pointer;
+  padding: 5px;
+  display: flex;
+} .copyIcon:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+}
+
+.querySearch {
+  /* min-height: calc(100vh - 275px) ; */
+}
+
+.related {
+  padding: 10px ;
+  border: 2px solid transparent ;
+  cursor: pointer;
+  transition: 0.4s;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  font-family: hafs;
+  font-size: 20px;
+  min-width: 50px;
+  text-align: center;
+  animation: down 1s;
+}
+.related:hover {
+  border-color: gainsboro;
+}
+
+.xMark {
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+  font-size: 30px;
+  padding: 0 10px;
+} .xMark:hover {
+  transform: scale(1.2);
+} .saved {
+  border: 2px solid transparent ;
+  cursor: pointer;
+  transition: 0.4s;
+  border-radius: 10px;
+  font-size: 25px;
+  min-width: 70px;
+  background-color: rgba(255, 255, 255, 0.1);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  color: #FCBC09 ;
+  font-weight: bold;
+} .saved p {
+  font-family: hafs;
+  padding: 10px;
+} .saved:hover {
+  border-color: white;
+} .down {
+  animation: down 1s;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+} ::-webkit-scrollbar-track {
+  background-color: grey;
+} ::-webkit-scrollbar-thumb {
+  background-color: gold;
+}
+
+/* Media Query */
+@media (max-width: 600px) {
+  .homeContent , .headReadPage {
+    min-height: calc(100vh - 56px);
+  } .surahReadPage {
+    min-height: calc(100vh - 136px);
+  } .listenPage {
+    min-height: calc(100vh - 96px);
+  }
+}
+
+@media (max-width: 550px) {
+  .namesShowing button {
+    min-width: 330px !important;
+  } .ayaAudio {
+    text-align: start;
+  }
+}
+
+@media (max-width: 400px) {
+  .num , .numVerse , .numVersePlus {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 450px) {
+  .readHeader , .listenHeader {
+    justify-content: end !important;
+  } .about {
+    font-size: 20px !important;
+  } .inputBox {
+    flex-direction: column;
+    height: 22vh;
+
+  } .inputBoxToTop {
+    height: 22vh;
+  } .querySearch {
+    /* min-height: calc(100vh - 323px); */
+  } 
+}
+
+@media (max-width: 350px) {
+  .names {
+    min-width: 200px !important;
+  } .readTitle , .listenTitle {
+    font-size: 1.5rem !important;
+  } .namesShowing button {
+    min-width: 200px !important;
+  }
 }
