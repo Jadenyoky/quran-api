@@ -58,5 +58,7 @@
   "share_target": null,
   "launch_handler": null,
   "shortcuts": [],
-  "iarc_rating_id": ""
+  "iarc_rating_id": "",
+  "theme_color": "#FFE6C1",
+  "background_color": "#FFE6C1",
 }
