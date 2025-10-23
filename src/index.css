@@ -11,10 +11,10 @@
 
 /* For All Elements */
 * {
-  margin: 0 ;
-  padding: 0 ;
+  margin: 0;
+  padding: 0;
   scroll-behavior: smooth;
-  font-family: 'Marhey', cursive ;
+  font-family: 'Marhey', cursive;
 }
 
 body {
@@ -30,73 +30,100 @@ body {
   flex-direction: column-reverse;
   gap: 10px;
   z-index: 100;
-} .arrow {
+}
+
+.arrow {
   transform: translateX(200%);
   transition: 0.5s cubic-bezier(0.215, 0.610, 0.355, 1) !important;
-} .moding {
+}
+
+.moding {
   transition: 0.5s cubic-bezier(0.215, 0.610, 0.355, 1) !important;
 }
 
 /* Animation For Home */
 .homeContent {
-  animation: halfScale 1s ;
-} @keyframes halfScale {
+  animation: halfScale 1s;
+}
+
+@keyframes halfScale {
   0% {
     opacity: 0.1;
     transform: scale(0.5);
   }
+
   100% {
     opacity: 1;
     transform: scale(1);
   }
-} .header {
+}
+
+.header {
   transition: 0.5s cubic-bezier(0.215, 0.610, 0.355, 1) !important;
-} .header div h4 {
-  font-family: Marhey, cursive ;
+}
+
+.header div h4 {
+  font-size: 24px;
+  font-family: Marhey, cursive;
 }
 
 /* Style For Read and Listen Page */
-.readPage , .listenPage {
+.readPage,
+.listenPage {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
   gap: 20px;
   padding: 20px;
-} .listenPage {
+}
+
+.listenPage {
   min-height: calc(100vh - 104px);
 }
 
 .namesShowing {
-  animation: yyy 1s cubic-bezier(0.215, 0.610, 0.355, 1) ;
-} @keyframes yyy {
+  animation: yyy 1s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+@keyframes yyy {
   0% {
     transform: translateX(-200%);
     opacity: 0;
-  } 100% {
+  }
+
+  100% {
     transform: translateX(0);
     opacity: 1;
   }
 }
 
 .namesHidding {
-  animation: aa 1s cubic-bezier(0.215, 0.610, 0.355, 1) ;
-} @keyframes aa {
+  animation: aa 1s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+@keyframes aa {
   0% {
     opacity: 1;
     transform: translateX(0);
-  } 100% {
+  }
+
+  100% {
     transform: translateX(-200%);
     opacity: 0;
   }
 }
 
 .about {
-  animation: law 1s cubic-bezier(0.215, 0.610, 0.355, 1) ;
-} @keyframes law {
+  animation: law 1s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+@keyframes law {
   0% {
     transform: translateY(-200%);
     opacity: 0;
-  } 100% {
+  }
+
+  100% {
     opacity: 1;
     transform: translateY(0);
   }
@@ -104,12 +131,16 @@ body {
 
 .aboutHiding {
   transform: translateY(-200%);
-  animation: law2 1s cubic-bezier(0.215, 0.610, 0.355, 1) ;
-} @keyframes law2 {
+  animation: law2 1s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+@keyframes law2 {
   0% {
     transform: translateY(0);
     opacity: 1;
-  } 100% {
+  }
+
+  100% {
     opacity: 0;
     transform: translateY(-200%);
   }
@@ -121,25 +152,34 @@ body {
   text-align: center;
   line-height: 1.8;
   min-height: calc(100vh - 144px);
-} @keyframes law3 {
+}
+
+@keyframes law3 {
   0% {
     opacity: 0;
-  } 50% {
+  }
+
+  50% {
     opacity: 1;
   }
-} .headReadPage {
+}
+
+.headReadPage {
   min-height: calc(100vh - 64px);
 }
 
 .ayat {
-  animation: yyy 1s ;
+  animation: yyy 1s;
   word-spacing: 5px;
-  font-size: 30px;
+  font-size: 24px;
   font-family: 'q1';
   line-height: 2;
   cursor: pointer;
-  transition: 0.5s ;
-} .ayat:hover {
+  transition: 0.5s;
+  text-align: justify;
+}
+
+.ayat:hover {
   background-color: rgba(128, 128, 128, 0.3);
 
 }
@@ -150,9 +190,9 @@ body {
 
 .lineTop {
   position: fixed;
-  top: 0 ;
-  background: rgb(255,127,80);
-  background: linear-gradient(107deg, rgba(255,127,80,1) 0%, rgba(255,215,0,1) 100%);
+  top: 0;
+  background: rgb(255, 127, 80);
+  background: linear-gradient(107deg, rgba(255, 127, 80, 1) 0%, rgba(255, 215, 0, 1) 100%);
   width: 0;
   height: 4px;
   z-index: 2000;
@@ -161,36 +201,48 @@ body {
 
 .audioSection {
   position: fixed;
-  top: 50% ;
+  top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%) scale(1);
-  animation: au 0.5s ;
+  transform: translate(-50%, -50%) scale(1);
+  animation: au 0.5s;
   text-align: center;
   border-radius: 10px;
   padding: 20px;
   width: 80%;
-} .audioSection audio {
+}
+
+.audioSection audio {
   width: 100%;
-} .highlightAudio {
+}
+
+.highlightAudio {
   position: fixed;
-  top: 0 ;
+  top: 0;
   height: 100vh;
   width: 100%;
   background-color: rgb(0, 0, 0, 0.6);
-  animation: aus 0.5s ;
-} @keyframes au {
+  animation: aus 0.5s;
+}
+
+@keyframes au {
   0% {
     opacity: 0;
-    transform: translate(-50%,-50%) scale(0.5);
-  } 50% {
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+
+  50% {
     opacity: 1;
     transform: translate(-50%, -50%) scale(1);
   }
-} @keyframes aus {
+}
+
+@keyframes aus {
   0% {
     opacity: 0;
     transform: translateY(-200%);
-  } 50% {
+  }
+
+  50% {
     opacity: 1;
     transform: translateY(0);
   }
@@ -202,46 +254,58 @@ body {
   border: 2px solid #999;
   border-radius: 10px;
   font-size: 20px;
-} 
+}
 
 .finalRes {
-  animation: up 1s ;
+  animation: up 1s;
   padding: 20px;
   text-align: center;
-  background-color: rgba(255, 255, 255, 0.1) ;
+  background-color: rgba(255, 255, 255, 0.1);
   display: flex;
   flex-direction: column;
   gap: 20px;
   cursor: pointer;
   transition: 0.3s;
-} .finalRes:hover {
+}
+
+.finalRes:hover {
   background-color: rgba(255, 255, 255, 0.3);
-} .finalRes p {
-  color: white ;
-  font-family: q1 ;
+}
+
+.finalRes p {
+  color: white;
+  font-family: q1;
   word-spacing: 5px;
   font-size: 30px;
-} .num , .numVerse , .numVersePlus {
-  animation: up 1s ;
+}
+
+.num,
+.numVerse,
+.numVersePlus {
+  animation: up 1s;
   display: flex;
   justify-content: space-between;
   flex-direction: row-reverse;
   align-items: center;
-  color: white ;
-  font-family: q1 ;
+  color: white;
+  font-family: q1;
   word-spacing: 5px;
   font-size: 30px;
-  background-color: rgba(255, 255, 255, 0.1) ;
+  background-color: rgba(255, 255, 255, 0.1);
   border-bottom: 20px solid #8a92a554;
   padding: 10px;
   transition: 0.3s;
-  gap: 20px ;
-} .numVerse {
+  gap: 20px;
+}
+
+.numVerse {
   margin-bottom: 30px;
   padding: 10px 20px;
   border-radius: 0px 0px 40px 40px;
-  border-bottom: 0 ;
-} .numVersePlus {
+  border-bottom: 0;
+}
+
+.numVersePlus {
   margin-bottom: 30px;
   padding: 10px 20px;
   border-radius: 0;
@@ -249,36 +313,48 @@ body {
 }
 
 .numS {
-  color: #FCBC09 !important ;
+  color: #FCBC09 !important;
   text-align: end;
   font-family: hafs !important;
-} .numTwo {
-  text-align: start ;
-  background-color: red ;
+}
+
+.numTwo {
+  text-align: start;
+  background-color: red;
   border: 1px solid;
   padding: 5px;
   border-radius: 5px;
-} .moreBtn {
+}
+
+.moreBtn {
   text-align: center;
   padding: 20px;
 }
+
 .match {
-  color: #FCBC09 ;
+  color: #FCBC09;
   animation: down 1s;
-} @keyframes up {
+}
+
+@keyframes up {
   0% {
     opacity: 0;
     transform: translateY(10%);
-  } 50% {
+  }
+
+  50% {
     opacity: 1;
     transform: translateY(0);
   }
 }
+
 @keyframes down {
   0% {
     opacity: 1;
     transform: translateY(0);
-  } 50% {
+  }
+
+  50% {
     opacity: 0;
     transform: translateY(10%);
   }
@@ -291,8 +367,9 @@ body {
 .inputSearch {
   max-width: 70%;
 }
+
 .inputSearch::placeholder {
-  color: white ;
+  color: white;
 }
 
 .inputBox {
@@ -304,14 +381,16 @@ body {
   justify-content: center;
   align-items: center;
   /* height: 100vh; */
-  animation: auss 1s ;
-  max-width: 100% ;
+  animation: auss 1s;
+  max-width: 100%;
   padding: 10px;
 
   margin-top: 54px;
   height: 15vh;
   transition: 0.5s;
-} .inputBoxToTop {
+}
+
+.inputBoxToTop {
   /* top: 10px ;
   left: 50%;
   transform: translate(-50%); */
@@ -319,11 +398,15 @@ body {
   height: 15vh;
   transition: 0.5s;
   border-bottom: 20px solid #8a92a554;
-} @keyframes auss {
+}
+
+@keyframes auss {
   0% {
     opacity: 0;
     transform: scale(0.5);
-  } 50% {
+  }
+
+  50% {
     opacity: 1;
     transform: scale(1);
   }
@@ -331,17 +414,25 @@ body {
 
 .resultsBar {
   transition: 0.5s cubic-bezier(0.215, 0.610, 0.355, 1) !important;
-  color: white ;
+  color: white;
   font-size: 20px;
-  animation: up 1s ;
-} .resultsBarP {
-  animation: up 1s ;
-} .resultsBar p {
+  animation: up 1s;
+}
+
+.resultsBarP {
+  animation: up 1s;
+}
+
+.resultsBar p {
   font-family: hafs;
-} .rrr .match {
+}
+
+.rrr .match {
   padding: 0 5px;
   font-size: 17px;
-} .resultsBar .match2 {
+}
+
+.resultsBar .match2 {
   font-family: hafs;
   font-size: 25px;
   padding: 0 5px;
@@ -351,37 +442,46 @@ body {
   overflow-y: auto;
   background-color: rgba(10, 42, 58, 0.99);
   position: fixed;
-  top: 0 ;
+  top: 0;
   height: 100%;
   width: 100%;
-  animation: up2 0.5s cubic-bezier(0.215, 0.610, 0.355, 1) ;
+  animation: up2 0.5s cubic-bezier(0.215, 0.610, 0.355, 1);
   direction: rtl;
   transition: 0.5s cubic-bezier(0.215, 0.610, 0.355, 1);
-} @keyframes up2 {
+}
+
+@keyframes up2 {
   0% {
     opacity: 0;
     transform: translateY(10%);
-  } 50% {
+  }
+
+  50% {
     opacity: 1;
     transform: translateY(0);
   }
-} .contentSearchIn {
+}
+
+.contentSearchIn {
   padding: 10px 30px;
 }
 
 .finalResTwo {
-  animation: up 1s ;
+  animation: up 1s;
   border-radius: 1px;
   border-right: 5px solid #FCBC09;
   padding: 20px;
   text-align: center;
-  background-color: rgba(255, 255, 255, 0.1) ;
+  background-color: rgba(255, 255, 255, 0.1);
   display: flex;
   flex-direction: column;
   gap: 20px;
   transition: 0.3s;
-  border-radius: 40px 0 0 0 ;
-} .finalResTwo p , .finalResTwo p .match {
+  border-radius: 40px 0 0 0;
+}
+
+.finalResTwo p,
+.finalResTwo p .match {
   font-family: q1;
   word-spacing: 5px;
   font-size: 30px;
@@ -392,31 +492,37 @@ body {
   padding: 20px;
   background-color: rgba(255, 255, 255, 0.1);
   display: flex;
-  gap: 20px ;
+  gap: 20px;
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
   margin-top: -30px;
   margin-bottom: 30px;
   border-radius: 0px 0px 40px 40px;
-} .ayaAbout .match {
+}
+
+.ayaAbout .match {
   padding: 0 5px;
 }
 
 .ayaAudio {
   text-align: center;
   padding: 20px 0;
-} .ayaAudio audio {
-  max-width: 90%;
-  width: 600px ;
+}
 
-} .ayaAbout p {
-  color: white ;
-} 
+.ayaAudio audio {
+  max-width: 90%;
+  width: 600px;
+
+}
+
+.ayaAbout p {
+  color: white;
+}
 
 .finalRes p .match {
   font-family: q1;
-} 
+}
 
 .hiddenContent {
   position: fixed;
@@ -427,22 +533,28 @@ body {
   cursor: pointer;
   transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
   border-radius: 0 0px 30px 0px;
-} .hiddenContent::before {
+}
+
+.hiddenContent::before {
   content: '<';
   position: absolute;
-  top: 50% ;
+  top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   font-size: 40px;
   transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
   color: white;
-} .hiddenContent:hover::before {
-  transform: translate(-50%,-50%) skew(10deg) scaleX(1.5) ;
+}
+
+.hiddenContent:hover::before {
+  transform: translate(-50%, -50%) skew(10deg) scaleX(1.5);
   border-radius: 0 10px 10px 10px;
   color: rgb(252, 188, 9);
-} .hiddenContent:hover {
+}
+
+.hiddenContent:hover {
   background-color: rgba(255, 255, 255, 0.3);
-} 
+}
 
 
 
@@ -450,37 +562,45 @@ body {
   position: fixed;
   top: 50%;
   left: 50%;
-  animation: uuu 1s ;
+  animation: uuu 1s;
   background-color: grey;
-  border: 2px solid gold ;
-  transform: translate(-50% , -50%);
-  color: gold ;
+  border: 2px solid gold;
+  transform: translate(-50%, -50%);
+  color: gold;
   padding: 10px;
   border-radius: 100px;
   font-size: 20px;
   box-shadow: 0 0 10px black;
-} @keyframes uuu {
+}
+
+@keyframes uuu {
   0% {
     opacity: 0;
-    transform: translate(-50% , -100%);
-  } 50% {
-    opacity: 1;
-    transform: translate(-50% , 0);
-  } 100% {
-    opacity: 0;
-    transform: translate(-50% , 100%);
+    transform: translate(-50%, -100%);
   }
-} 
+
+  50% {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(-50%, 100%);
+  }
+}
 
 .copyIcon {
-  width: 50px ;
-  height: 50px ;
+  width: 50px;
+  height: 50px;
   transition: 0.4s;
   z-index: 3000;
   cursor: pointer;
   padding: 5px;
   display: flex;
-} .copyIcon:hover {
+}
+
+.copyIcon:hover {
   background-color: rgba(255, 255, 255, 0.3);
   border-radius: 10px;
 }
@@ -490,8 +610,8 @@ body {
 }
 
 .related {
-  padding: 10px ;
-  border: 2px solid transparent ;
+  padding: 10px;
+  border: 2px solid transparent;
   cursor: pointer;
   transition: 0.4s;
   border-radius: 10px;
@@ -502,6 +622,7 @@ body {
   text-align: center;
   animation: down 1s;
 }
+
 .related:hover {
   border-color: gainsboro;
 }
@@ -511,10 +632,14 @@ body {
   cursor: pointer;
   font-size: 30px;
   padding: 0 10px;
-} .xMark:hover {
+}
+
+.xMark:hover {
   transform: scale(1.2);
-} .saved {
-  border: 2px solid transparent ;
+}
+
+.saved {
+  border: 2px solid transparent;
   cursor: pointer;
   transition: 0.4s;
   border-radius: 10px;
@@ -526,32 +651,48 @@ body {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  color: #FCBC09 ;
+  color: #FCBC09;
   font-weight: bold;
-} .saved p {
+}
+
+.saved p {
   font-family: hafs;
   padding: 10px;
-} .saved:hover {
+}
+
+.saved:hover {
   border-color: white;
-} .down {
+}
+
+.down {
   animation: down 1s;
 }
 
 ::-webkit-scrollbar {
   width: 10px;
-} ::-webkit-scrollbar-track {
+}
+
+::-webkit-scrollbar-track {
   background-color: grey;
-} ::-webkit-scrollbar-thumb {
+}
+
+::-webkit-scrollbar-thumb {
   background-color: gold;
 }
 
 /* Media Query */
 @media (max-width: 600px) {
-  .homeContent , .headReadPage {
+
+  .homeContent,
+  .headReadPage {
     min-height: calc(100vh - 56px);
-  } .surahReadPage {
+  }
+
+  .surahReadPage {
     min-height: calc(100vh - 136px);
-  } .listenPage {
+  }
+
+  .listenPage {
     min-height: calc(100vh - 96px);
   }
 }
@@ -559,40 +700,63 @@ body {
 @media (max-width: 550px) {
   .namesShowing button {
     min-width: 330px !important;
-  } .ayaAudio {
+  }
+
+  .ayaAudio {
     text-align: start;
   }
 }
 
 @media (max-width: 400px) {
-  .num , .numVerse , .numVersePlus {
+
+  .num,
+  .numVerse,
+  .numVersePlus {
     justify-content: center;
     flex-wrap: wrap;
   }
 }
 
 @media (max-width: 450px) {
-  .readHeader , .listenHeader {
+  .homeContent div {
+    flex-direction: column;
+  }
+
+  .readHeader,
+  .listenHeader {
     justify-content: end !important;
-  } .about {
+  }
+
+  .about {
     font-size: 20px !important;
-  } .inputBox {
+  }
+
+  .inputBox {
     flex-direction: column;
     height: 22vh;
 
-  } .inputBoxToTop {
+  }
+
+  .inputBoxToTop {
     height: 22vh;
-  } .querySearch {
-    /* min-height: calc(100vh - 323px); */
-  } 
+  }
+
+  .header div h4 {
+    font-size: 17px;
+  }
 }
 
 @media (max-width: 350px) {
   .names {
     min-width: 200px !important;
-  } .readTitle , .listenTitle {
+  }
+
+  .readTitle,
+  .listenTitle {
     font-size: 1.5rem !important;
-  } .namesShowing button {
+  }
+
+  .namesShowing button {
     min-width: 200px !important;
   }
 }
