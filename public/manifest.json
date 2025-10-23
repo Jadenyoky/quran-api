@@ -1,6 +1,8 @@
 {
   "name": "Quran",
   "short_name": "Quran",
+  "theme_color": "#FFE6C1",
+  "background_color": "#FFE6C1",
   "description": "",
   "display": "standalone",
   "start_url": "/",
@@ -59,6 +61,5 @@
   "launch_handler": null,
   "shortcuts": [],
   "iarc_rating_id": "",
-  "theme_color": "#FFE6C1",
-  "background_color": "#FFE6C1",
+  
 }
